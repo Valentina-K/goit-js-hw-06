@@ -4,7 +4,7 @@ const refs = {
     btnIncr: document.querySelector('[data-action="increment"]'),
     counterSpan: document.querySelector('#value')
 }
-console.log(refs.btnDecr);
+
 refs.btnDecr.addEventListener('click', onButtonDecrClick);
 refs.btnIncr.addEventListener('click', onButtonIncrClick);
 
