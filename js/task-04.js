@@ -10,12 +10,12 @@ refs.btnIncr.addEventListener('click', onButtonIncrClick);
 
 function onButtonDecrClick() {
     counterValue -= 1;
-    refs.counterSpan.textContent = counterValue;
+    updateTextContent();
 }
 
 function onButtonIncrClick() {
     counterValue += 1;
-    refs.counterSpan.textContent = counterValue;
+    updateTextContent();
 }
 
 function updateTextContent() {
