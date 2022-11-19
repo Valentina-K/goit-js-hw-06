@@ -15,3 +15,11 @@ function onFormSubmit(event) {
     }
     
 }
+/* const {
+    elements: { login, password }
+  } = event.currentTarget;
+
+  if (login.value === "" || password.value === "") {
+    return console.log("Please fill in all the fields!");
+  }
+ */
