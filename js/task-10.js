@@ -4,6 +4,7 @@ const refs = {
   btnDestroy: document.querySelector('[data-destroy]'),
   listBoxes: document.querySelector('#boxes')
 };
+let sizehEl = 30;
 
 refs.btnCreat.addEventListener('click', onBtnCreateClick);
 refs.btnDestroy.addEventListener('click', onBtnDestroyClick);
@@ -13,16 +14,15 @@ function onBtnCreateClick() {
 }
 
 function onBtnDestroyClick() {
+  sizehEl = 30;
   destroyBoxes();
 }
 
-function createBoxes(amount) {
-  let sizehEl = 30;
-  let element = `<div style="background-color: ${getRandomHexColor()}; width: ${sizehEl}px; height: ${sizehEl}px"></div>`;
-  for (let index = 1; index < amount; index++) {
-    sizehEl += 10;
+function createBoxes(amount) {  
+  let element = '';
+  for (let index = 0; index < amount; index++) {    
     element += `<div style="background-color: ${getRandomHexColor()}; width: ${sizehEl}px; height: ${sizehEl}px"></div>`;
-    
+    sizehEl += 10;    
   }
   refs.listBoxes.insertAdjacentHTML('beforeend', element);
 }
